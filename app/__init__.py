@@ -21,7 +21,7 @@ def create_app(config_class='config.Config'):
     jwt.init_app(app)
     migrate.init_app(app, db)
 
-    CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}}, supports_credentials=True)
+    CORS(app, resources={r"/*": {"origins": "https://system-irragation.web.app"}}, supports_credentials=True)
 
     from app.auth.routes import auth_bp
     from app.devices.routes import devices_bp
